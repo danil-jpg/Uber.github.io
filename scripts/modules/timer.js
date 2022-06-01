@@ -16,7 +16,6 @@ const timer = function(end = "2025-05-30"){
 				 hoursBlock = timeBlock[1],
 				 minutesBlock = timeBlock[2],
 				 secondsBlock = timeBlock[3];
-				 console.log(daysBlock , days)
 
 		daysBlock.textContent = days;
 		hoursBlock.textContent = hours;

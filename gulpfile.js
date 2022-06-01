@@ -23,10 +23,10 @@ const paths = {
 		src : "index.html",
 		dest : "dist/"
 	},
-	// styles : {
-	// 	src : `src/styles/**/*.sass`,
-	// 	dest : "dist/css/"
-	// },
+	styles : {
+		src : `css/style.css`,
+		dest : "dist/css/"
+	},
 	scripts : {
 		src : 'scripts/**/*.js',
 		dest : "dist/js/"
@@ -39,6 +39,15 @@ const paths = {
 
 function clean(){
 	return del(["dist/*" ,"!dist/images"])
+}
+
+function styles(){
+	return gulp.src(paths.styles.src)
+	.pipe(cleanCss(
+		{level : 2}
+	))
+	.pipe(gulp.dest(paths.styles.dest))
+	.pipe(browserSync.stream())
 }
 
 
@@ -64,7 +73,7 @@ function watch(){
     })
 	gulp.watch(paths.html.src , minifyHtml)
 	gulp.watch(paths.html.dest).on("change" ,browserSync.reload)
-	// gulp.watch(paths.styles.src, styles)
+	gulp.watch(paths.styles.src, styles)
 	gulp.watch(paths.scripts.src, scripts)
 }
 

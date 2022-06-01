@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Uber</title>
     <link rel="shortcut icon" href="Icons/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ae3a1d463d.js" crossorigin="anonymous"></script>
@@ -47,7 +47,7 @@
                 <span></span>
             </div>
         </nav>
-
+        <div style="width:17px"></div>
         <div class="subheader">
             <div class="container">
                 <div class="row">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-6 col-md-3">
                         <a href="tel:84957970988" class="subheader_phone xs-visible">8 495 797 09 88</a>
-                        <button class="subheader_btn">
+                        <button class="subheader_btn modal">
                             Заказать звонок
                         </button>
                     </div>
@@ -81,7 +81,7 @@
                         Компания UBER динамически развивающаяся. Компания на рынке занимает лидирующее место среди таксомоторных компаний, Компания абсолютно прозрачная вы можете контролировать все процессы у себя в личном кабинете. Бонуcная система.Помимо выполненной работы
                         по заказам, компания начисляет бонусы за <br>пиковое время.<br><br> Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве. Водители у нас зарабатывают от 80000- 120000 в месяц.
                     </div>
-                    <button class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+                    <button class="promo_btn modal">ОТПРАВИТЬ ЗАЯВКУ!</button>
                 </div>
             </div>
         </div>
@@ -201,44 +201,7 @@
             <div class="mobile_mark">Возможности</div>
             <div class="mobile_title">мобильное приложение убер</div>
             <div class="mobile_subtitle">Сделайте заказ, совершите поездку и оплатите ее стоимость, используя свой мобильный телефон</div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="mobile_item mobile_item_1">
-                        <div class="mobile_item_subtitle">оформление заказа одним касанием</div>
-                        <div class="mobile_item_plus"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mobile_item mobile_item_2">
-                        <div class="mobile_item_subtitle">надежная подача</div>
-                        <div class="mobile_item_plus"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mobile_item mobile_item_3">
-                        <div class="mobile_item_subtitle">прозрачные цены</div>
-                        <div class="mobile_item_plus"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mobile_item mobile_item_4">
-                        <div class="mobile_item_subtitle">безналичная оплата</div>
-                        <div class="mobile_item_plus"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mobile_item mobile_item_5">
-                        <div class="mobile_item_subtitle">обратная связь</div>
-                        <div class="mobile_item_plus"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mobile_item mobile_item_6">
-                        <div class="mobile_item_subtitle">разделить стоимость поездки</div>
-                        <div class="mobile_item_plus"></div>
-                    </div>
-                </div>
-            </div>
+            <div class="row" id="row">
         </div>
     </section>
     <section class="choice">
@@ -331,58 +294,8 @@
                 <div class="require_minutes">0</div>
                 <div class="require_seconds">0</div>
             </div>
-            </div>
+        </div>
     </section>
-    <style>
-        #unique{
-            text-align: center;
-        }
-        .require_left{
-            color:#1eacc7
-        }
-        .require_time{
-            position:relative;
-            margin-left: 90px;
-            width : 80%;
-            height : 50px;
-            background-color: white;
-        }
-        .require_days{
-            display: inline-block;
-            margin-right : 0%;
-            background-color: white;
-            border: solid grey;
-            width : 50px;
-            height : 100%;
-        }
-        .require_hours{
-            display: inline-block;
-            margin-right : 0%;
-            background-color: white;
-            border: solid grey;
-            width : 50px;
-            height : 100%;
-        }
-        .require_minutes{
-            display: inline-block;
-            margin-right : 0%;
-            background-color: white;
-            border: solid grey;
-            width : 50px;
-            height : 100%;
-        }
-        .require_seconds{
-            position:relative;
-            bottom: 0px;
-            display: inline-block;
-            margin-right : 0%;
-            margin-bottom: 700px;
-            background-color: white;
-            border: solid grey;
-            width : 50px;
-            height : 100%;
-        }
-    </style>
 
     <section class="map">
         <div class="container">
@@ -435,6 +348,31 @@
         <div class=" last_long_rectangle"></div>
     </footer>
     <script type="module" src="scripts/main.js"></script>
+    <section id="form_section" class="form" >
+        <form id="form" name = "form">
+            <div class="form_container" >
+                <button class="form_close">
+                    <div class="form_close_horizontal"> 
+                         <div class="form_close_vertical"></div>
+                    </div>
+                </button>
+                <label class="form_label" for="fname"><h3>Имя :</h3></label><br>
+                <input type="text" class="form_firstname"  name="FirstName">
+                <label class="form_lastname" for="fname"><h3>Фамилия :</h3></label><br>
+                <input type="text" class="form_lastname_input"  name="lastName">
+                <h3  style="display:block;  margin: 20px auto 0px auto;text-align: center;">Номер телефона</h3>
+                <input type="text" class="form_tel" name="tel">
+                <input type="submit" class="form_sent promo_btn" placeholder="ОТПРАВИТЬ">
+            </div>
+        </form>
+        <div class="thanks" style="display:none">
+            <div class="thx_block">
+                <span class="thx_text">Благодарим за обращение!</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="form_overlay is_hid"></div>
 </body>
 
 </html>
