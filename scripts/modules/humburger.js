@@ -1,9 +1,8 @@
 export default function (){
-	window.addEventListener("DOMContentLoaded", () => {
+
 		const humburger = document.querySelector(".humburger"),
 			menu = document.querySelector(".menu"),
 			menuItem = document.querySelectorAll(".menu_item");
-
 
 		humburger.addEventListener("click", () => {
 			menu.classList.toggle("menu_active");
@@ -18,6 +17,4 @@ export default function (){
 				humburger.classList.toggle("humburger_active");
 			})
 		});
-
-	});
 }

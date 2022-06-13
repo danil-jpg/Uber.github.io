@@ -33,6 +33,8 @@ export default () => {
 				body.style.overflow  = ""
 				document.querySelector("html").style.marginRight = `${0}px`
 				document.querySelector("header").style.visibility = "";
+
+
 	})
 
 }
